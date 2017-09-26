@@ -1,0 +1,30 @@
+{
+  "name": "merapi-example",
+  "version": "1.0.0",
+  "description": "Example usage for merapi IoC",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "clean": "rm -rf ./lib",
+    "lint": "tslint --project ."
+  },
+  "keywords": [
+    "merapi",
+    "express",
+    "ioc"
+  ],
+  "author": "asrul sani ariesandy <asrul@kata.ai>",
+  "homepage": "https://github.com/asrulsibaoel/merapi-example",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.9.1",
+    "merapi": "^0.18.2",
+    "merapi-plugin-express": "^0.3.7",
+    "merapi-plugin-service": "^0.3.5"
+  },
+  "devDependencies": {
+    "tslint": "^4.2.0",
+    "tslint-eslint-rules": "^3.2.3",
+    "typescript": "^2.1.4"
+  }
+}

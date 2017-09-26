@@ -1,0 +1,37 @@
+schema: kata.ai/schema/merapi/1.0
+name: ${package.name}
+version: ${package.version}
+
+greeting: Haloo
+
+components:
+    firstComponent: FirstComponent
+    secondComponent: SecondComponent
+
+    app: 
+        type: express
+        config: application
+
+application:
+    host: localhost
+    port: 8080
+    routes:
+        /hello:
+            - secondComponent.guard
+            - GET: firstComponent.sakKarep
+            - /world:
+                GET: firstComponent.sakKarepDua
+        GET /: firstComponent.sakKarep
+
+plugins:
+    - express
+    - service
+
+service:
+    name: ${package.name}
+    version: ${package.version}
+    port: 5000
+    api.v1:
+        getSakKarepTelu: firstComponent.sakKarepTelu
+
+main: firstComponent
