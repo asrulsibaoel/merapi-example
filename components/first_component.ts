@@ -1,10 +1,11 @@
 import { Component, ILogger, IConfigReader } from 'merapi';
+import { SecondComponent } from './second_component';
 
 export default class FirstComponent extends Component {
 	constructor(
 		private logger: ILogger,
         private config: IConfigReader,
-        private secondComponent: any
+        private secondComponent: SecondComponent
         ) {
 		super();
 
